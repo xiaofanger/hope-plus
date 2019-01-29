@@ -70,6 +70,11 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
         <!--springboot 集成Mybatis所需jar配置 start -->
         <!--支持使用 JDBC 访问数据库 -->
         <dependency>

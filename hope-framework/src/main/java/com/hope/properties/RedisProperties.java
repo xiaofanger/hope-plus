@@ -3,6 +3,7 @@ package com.hope.properties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
@@ -16,6 +17,7 @@ import java.util.List;
  * @create:2018-10-17 11:35
  **/
 @Configuration
+@EnableConfigurationProperties(RedisProperties.class)
 @ConfigurationProperties(prefix = "spring.redis")
 @Data
 @EqualsAndHashCode(callSuper = false)

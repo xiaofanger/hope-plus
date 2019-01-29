@@ -16,7 +16,6 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
 public class TestControllerTest{
 
     private static final Logger log= LoggerFactory.getLogger(TestControllerTest.class);

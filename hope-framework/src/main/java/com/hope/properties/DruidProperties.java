@@ -3,6 +3,7 @@ package com.hope.properties;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 
@@ -17,6 +18,7 @@ import java.util.List;
  **/
 @Configuration
 @ConfigurationProperties(prefix = "hope.druid")
+@EnableConfigurationProperties(DruidProperties.class)
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Order(-1)

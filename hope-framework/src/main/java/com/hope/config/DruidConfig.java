@@ -26,8 +26,8 @@ public class DruidConfig {
     private DruidProperties druidProperties;
 
     @Bean
-    public ServletRegistrationBean druidStatViewServlet(){
-        ServletRegistrationBean bean=new ServletRegistrationBean(new StatViewServlet(),druidProperties.getServletPath());
+    public ServletRegistrationBean<StatViewServlet> druidStatViewServlet(){
+        ServletRegistrationBean<StatViewServlet> bean=new ServletRegistrationBean<>(new StatViewServlet(), druidProperties.getServletPath());
         //ip黑名单，共同存在时，deny优先于allow：如果满足deny的话提示:Sorry, you are not permitted to view this page
         List<String> denyIps=druidProperties.getDenyIps();
         if(!CollectionUtils.isEmpty(denyIps)){
@@ -50,8 +50,8 @@ public class DruidConfig {
      * Druid的StatFilter
      */
     @Bean
-    public FilterRegistrationBean druidStatFilter(){
-        FilterRegistrationBean bean=new FilterRegistrationBean(new WebStatFilter());
+    public FilterRegistrationBean<WebStatFilter> druidStatFilter(){
+        FilterRegistrationBean<WebStatFilter> bean=new FilterRegistrationBean<>(new WebStatFilter());
         //配置过滤规则
         bean.addUrlPatterns("/");
         //配置排除的url
