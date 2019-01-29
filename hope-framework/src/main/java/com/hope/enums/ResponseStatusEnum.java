@@ -28,7 +28,7 @@ public enum ResponseStatusEnum {
     }
     public static ResponseStatusEnum get(String message){
         for (ResponseStatusEnum responseStatusEnum:ResponseStatusEnum.values()){
-            if (responseStatusEnum.getMessage() == message){
+            if (responseStatusEnum.getMessage().equals(message)){
                 return responseStatusEnum;
             }
         }
